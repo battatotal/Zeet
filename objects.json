@@ -1,0 +1,48 @@
+[
+    {
+        "id": 1,
+        "title": "Нарциссы",
+        "discribe": "Какое-то описание нарцисса...",
+        "materials": "Глина",
+        "cost": "5000",
+        "size": "15х5х15",
+        "imageMain": "/static/images/Нарциссы/main.jpg",
+        "image1": "/static/images/Нарциссы/1.jpg",
+        "image2": "/static/images/Нарциссы/2.jpg",
+        "image3": "/static/images/Нарциссы/3.jpg",
+        "image4": "/static/images/Нарциссы/4.jpg",
+        "actual": "True",
+        "url": "narcissy"
+    },
+    {
+        "id": 2,
+        "title": "Пионы",
+        "discribe": "Какое-то описание пионов. Пионы - очень красивые цветы, рассказывать про которые можно бесконечно. Но лучше всего, увидеть эти цветы хотя бы раз!",
+        "materials": "Глина",
+        "cost": "5000",
+        "size": "15х5х15",
+        "imageMain": "/static/images/Пионы/main.jpg",
+        "image1": "/static/images/Пионы/1.jpg",
+        "image2": "/static/images/Пионы/2.jpg",
+        "image3": "/static/images/Пионы/3.jpg",
+        "image4": "/static/images/Пионы/4.jpg",
+        "actual": "True",
+        "url": "piony"
+    },
+    {
+        "id": 3,
+        "title": "Розы",
+        "discribe": "Какое-то описание роз...",
+        "materials": "Глина",
+        "cost": "5000",
+        "size": "15х5х15",
+        "imageMain": "/static/images/Розы/main.jpg",
+        "image1": "/static/images/Розы/1.jpg",
+        "image2": "/static/images/Розы/2.jpg",
+        "image3": "/static/images/Розы/3.jpg",
+        "image4": "/static/images/Розы/4.jpg",
+        "actual": "True",
+        "url": "rosy"
+    }
+    
+]

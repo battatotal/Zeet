@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+    
+    <title>{{ title }}</title>
+
+
+
+
+    <!--Иконки-->
+<link rel="stylesheet" href="\static\css\font-awesome.min.css">
+
+
+<!--Шрифты-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Merriweather:ital,wght@0,900;1,400;1,900&display=swap" rel="stylesheet">
+
+
+
+
+<!-------Скопировал с главной страницы, отвечает за анимацию меню при узком экране--------------->
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+
+
+
+<!---------------------->
+
+    <!-- Bootstrap core CSS из Index в попытке адаптива-->
+<link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!---------------------->
+
+
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  
+
+  <!-- 5 скрипт с cdnjs-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+  <!-- 7 скрипт с cdnjs-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!-- Favicons -->
+<!--<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">-->
+<!--<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">-->
+<!--<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">-->
+<!--<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">-->
+<!--<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">-->
+<!--<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">-->
+<!--<meta name="theme-color" content="#7952b3">-->
+
+  <!--тут .item img вручную выравниваю размер фотографий--> <!-- Позже убрал его(поставил букву's' между 2 и 80 и адаптивка заработала )-->
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        #navbarCollapse {
+          margin-left: 30%;
+        }
+      }
+
+      @media (min-width: 991px) {
+        main {
+          height: 512px;
+          width: 820px;
+          margin: auto;
+          margin-top: 0;
+        }
+        #topedge {
+          margin-top: 7%;
+        }
+
+        .navbar {
+          margin: auto;
+          margin-top: 0;
+          width: 820.5px;
+        }
+  
+      }
+
+      @media (max-width: 991px) {
+        #textblock {
+          height: 100%;        
+        }
+
+        #textblock h2 {
+          font-size: 300%;
+          margin-top: 10%;
+        }
+
+        #textblock p {
+          font-size: 200%;
+          margin-top: ;
+        }
+
+        #textblock span {
+          font-size: 150%;
+          margin-top: ;
+        }
+        #textblock b {
+          font-size: 150%;
+          margin-top: ;
+        }
+      }
+
+      @media (max-width: 320px){
+        #order {
+          width: 95px;
+          font-size: 80%;
+        }
+      }
+
+      #mainIMG
+      {
+        width: 200%;
+        height: auto;
+       
+      }
+      
+      .item img
+      {
+        height: 2s80px;
+      }
+
+
+      #icondiv {
+        color: #E0FFFF;
+        height: 10%;
+      }
+
+      #icondiv i {
+        color: #fff;
+        font-size: 30px;
+        padding: 20px;
+        transition: all 0.5sec ease;
+      }
+
+      #icondiv i:hover {
+        color: #c71585;
+        transform: scale(1.1);
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        -webkit-overflow-scrolling: touch;
+      }
+
+
+      #spot {
+        font-family: 'Merriweather', serif;
+        font-style: italic;
+      }
+
+      #osn p{
+        font-family: 'Merriweather', serif;
+      }
+
+      #title {
+        font-family: 'Merriweather', serif;
+      }
+
+      #myModal p {
+        font-family: "Merriweather", serif;
+      }
+
+      .navbar-brand {
+        font-family: 'Marck Script', cursive;
+      }
+
+      body.modal-open {
+        padding-left: 27px;
+      }
+
+
+    </style>
+
+
+
+
+    
+    <!-- Custom styles for this template -->
+    <link href="C:\Users\Компутер\Desktop\flowerflask\static\css\heroes.css" rel="stylesheet">
+
+
+    <!--LightBox-->
+    <link rel="stylesheet" href="/static/css/lightbox.css">
+
+  </head>
+
+
+
+<!-- сначала вместо img было .item, потом я создал класс .gal-->
+  <style type="text/css">
+     .gal{
+      transition: .5s ease-in-out;
+    }
+
+    .gal:hover{
+      filter: brightness(80%);
+    }
+  </style>
+
+  <body style="background-color: #E0FFFF" class="container justify-content-center">
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{url_for('index')}}">Лариса и Цветок</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          {% for m in menu %}
+
+          <li class="nav-item">
+            {% if m.title == title or m.title in title %}
+            <a class="nav-link active" aria-current="page" href="{{m.url}}">{{ m.title }}</a>
+            {% elif m.title == 'Новости' or m.title == 'О нас' %}
+            <a class="nav-link disabled" aria-current="page" href="{{m.url}}">{{ m.title }}</a>
+            {% else %}
+            <a class="nav-link" aria-current="page" href="{{m.url}}">{{ m.title }}</a>
+            {% endif %}
+          </li>{% endfor %}
+         </ul>     
+    </header>
+   <!-- <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Домашний</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          {% for m in menu %}
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{m.url}}">{{ m.title }}</a>
+          </li>{% endfor %}
+        </ul>
+        
+        <div class="btn-group"> 
+          <button class="btn btn-outline-warning" type="submit">Регистрация</button>
+          <button class="btn btn-outline-warning" type="submit">Войти</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+-->
+
+<main style="margin-top: %;"> <!--убрал margin-top 5%-->
+
+	<div id="osn" class="container my-5" style="background-color: #FFFFFF">
+    <div class="row p-4 pb-3 pe-lg-0 pt-lg-3 align-items-center rounded-3 border shadow-lg">
+     
+      <div id="topedge" class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
+          <img id="mainIMG" class="rounded-lg-3" src="{{ res[0].imageMain }}" alt="image" width="720">
+      </div>
+       <!--СТАРАЯ ВЕРСИЯ ОПИСАНИЯ - НЕАДАПТИВНЫЕ БУКВЫ. НИЖЕ НОРМ ВЕРСИЯ<div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+        <h1 class="display-4 fw-bold lh-1">{{ res.title }}</h1>
+        <p class="lead">{{ res.discribe }}Тут можно будет прописать характеристики цветка. Красиво описать его.
+        Указать стоимость и материалы из которых он был изготовлен. Не забыть про другие фотографии!</p>
+        <p class="card-text">Материалы: &nbsp&nbsp&nbsp<big><big><big>{{res.materials}}</big></big></big></p>
+        <p class="card-text">Размер: &nbsp&nbsp&nbsp<big><big><big>{{res.size}}</big></big></big></p>
+        <p class="card-text">Стоимость: &nbsp&nbsp&nbsp<big><big><big>{{res.cost}}</big></big></big></p>      
+      </div>-->
+      <div id="textblock" class="col-md-12 col-lg-7">  <!--в мд 7ку заменил на 12 и добавил col-lg-7(та 7ка)-->
+        <h2 id="title" class="featurette-heading">{{ res[0].title }}</h2>
+        <p class="lead">{{ res[0].discribe }}</p>
+        <br>
+        <br>
+        <div class="row">
+          <div class="col-7">
+        <span id="upspan" class="text-muted"><span id="spot">Размер: </span><b>{{res[0].size}}</b></span>
+        <br>
+        <span class="text-muted"><span id="spot">Материалы: </span><b>{{res[0].materials}}</b></span> 
+        <br>
+        <span class="text-muted"><span id="spot">Цена: </span><b>{{res[0].cost}}</b></span>
+        </div>
+        <div class="col-5"><button type="button" style="margin-top: 20%;" id="order" class="btn btn-primary btn-lg"data-bs-toggle="modal" data-bs-target="#myModal" >Заказать</button></div>
+        </div>
+      </div>
+    </div>
+        <!--
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-8 text-center">
+              <h1 class="heading mb-4">Тут отображается слайдер</h1> 
+              <p class="mb-4 lead">Lorem 20</p>
+              <p class ="mb-0"></p>
+              <a href="#" class="btn btn-primary">Find more</a>  
+            </div>           
+          </div>
+          -->
+
+
+          <!--MODAL-->
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Перейти в Telegram</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Пока сайт находится в разработке, договориться с мастером по поводу заказов можно 
+                      непосредственно в Telegram.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Нет, спасибо</button>
+                    <a href="http://telegram.org"><button type="button" class="btn btn-primary">Да, перейти</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!---->
+
+
+        <div class="container-fluid my-5">
+          <div class="row mt-5">
+            <div class="owl-carousel owl-theme">
+                <div class="item mb-4">
+                  <div class="card border-0 shadow">
+                    <a href="{{res[0].image1}}" data-lightbox="gallery1"><img class="gal" src="{{res[0].image1}}" alt="image" class="card-img-top"></a>
+                    <div class="card-body">
+                      <!--<h4>Какой-то текст</h4>-->
+                    </div>
+                  </div>
+                </div>
+
+                <!--item -->
+                <div class="item mb-4">
+                  <div class="card border-0 shadow">
+                    <a href="{{res[0].image2}}" data-lightbox="gallery1"><img class="gal" src="{{res[0].image2}}" alt="image" class="card-img-top"></a>
+                    <div class="card-body">
+                      <!--<h4>Какой-то текст</h4>-->
+                    </div>
+                  </div>
+                </div>
+
+                <!--item -->
+                <div class="item mb-4">
+                  <div class="card border-0 shadow">
+                    <a href="{{res[0].image3}}" data-lightbox="gallery1"><img class="gal" src="{{res[0].image3}}" alt="image" class="card-img-top"></a>
+                    <div class="card-body">
+                      <!--<h4>Какой-то текст</h4>-->
+                    </div>
+                  </div>
+                </div>
+
+                <!--item -->
+                <div class="item mb-4">
+                  <div class="card border-0 shadow">
+                    <a href="{{res[0].image4}}" data-lightbox="gallery1"><img class="gal" src="{{res[0].image4}}" alt="image" class="card-img-top"></a>
+                    <div class="card-body">
+                      <!--<h4>Какой-то текст</h4>-->
+                    </div>
+                  </div>
+                </div>
+
+                <!--item -->
+
+
+
+                
+            </div>  
+            
+          </div>
+        </div>    
+
+      </div>
+
+<div id="beforefooter" class="container shadow rounded" style="background-color: #4169e1;">
+    <div id="icondiv" class="container sm-col-4 md-lg-col-12 " style="width: 250px; margin-left: auto; margin-right: auto;">
+      <a href=""><i class="fa fa-telegram"></i></a>
+      <a href=""><i class="fa fa-instagram"></i></a>
+      <a href=""><i class="fa fa-vk"></i></a>
+    </div>
+  </div>
+
+<!-- FOOTER -->
+  <footer class="container" style="margin-top: 1%; margin-bottom: 5%;">
+    <p class="float-end"><a href="">Smirnov A.M.</a></p>
+    <p>&copy; 2022 Цветочек, Inc.</p>
+  </footer>
+
+</main>
+
+
+
+
+
+
+
+ <!-- Скрипт похоже отвечает за прокрутку( в оригинале страница длинная, а у меня по одному объекту)       <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+
+
+ <!--<footer class="text-muted py-5" style="margin-top: 1%">
+  <div class="container">
+    <p>Alexey Sm</p>
+  </div>
+</footer>-->
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  <!-- jquery подключил-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+  <!-- 1 скрипт с cdnjs-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <!-- подключение скрипта Setup с https://owlcarousel2.github.io/OwlCarousel2/demos/basic.html-->
+
+  <script>
+          $('.owl-carousel').owlCarousel({
+          loop:true,
+          margin:10,
+          nav:true,
+          responsive:{
+              0:{
+                  items:1
+              },
+              600:{
+                  items:2
+              },
+              1000:{
+                  items:3
+              }
+          }
+      })
+
+  </script>
+
+  <script src="/static/js/lightbox-plus-jquery.js"></script>
+  <script>
+    lightbox.option({
+      'showImageNumberLabel': false,
+      'wrapAround': true
+
+    })
+  </script>
+
+  </body>
+</html>  	

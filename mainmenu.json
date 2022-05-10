@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "title": "Главная",
+        "url": "/"
+    },
+    {
+        "id": 2,
+        "title": "Галерея",
+        "url": "/gallery"
+    },
+    {
+        "id": 3,
+        "title": "Заказать",
+        "url": "http://telegram.org"
+    },
+    {
+        "id": 4,
+        "title": "Новости",
+        "url": "/news"
+    },
+    {
+        "id": 5,
+        "title": "О нас",
+        "url": "/about"
+    }    
+]

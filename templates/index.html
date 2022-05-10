@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{title}}</title>
+
+
+
+    <link rel="stylesheet" href="static\css\font-awesome.min.css">
+
+    <!--Шрифты-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Merriweather:ital,wght@0,900;1,400;1,900&display=swap" rel="stylesheet">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!--    &lt;!&ndash; Favicons &ndash;&gt;-->
+<!--<link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">-->
+<!--<link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">-->
+<!--<link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">-->
+<!--<link rel="manifest" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/manifest.json">-->
+<!--<link rel="mask-icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">-->
+<!--<link rel="icon" href="https://getbootstrap.com/docs/5.1/assets/img/favicons/favicon.ico">-->
+<!--<meta name="theme-color" content="#7952b3">-->
+
+
+    <style>
+
+      h2 {
+        font-family: 'Merriweather', serif;
+      }
+      #simpleP {
+        font-family: 'Merriweather' serif;
+        font-style: italic;
+        font-size: 150%;
+      }
+
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+        #navbarCollapse {
+          margin-left: 30%;
+        }
+
+        #picture3 {
+          margin-top: 30%;
+        }
+      }
+
+      @media (min-width: 821px) {
+        body {
+          height: 512px;
+          width: 820px;
+          margin: auto;
+          margin-top: 0;
+        }        
+        .navbar {
+          margin: auto;
+          margin-top: 0;
+          width: 820.5px;
+        }
+  
+      }
+
+      @media (max-width: 767px){
+        #picture {
+          margin-top: 10%;
+          height: 70%;
+          width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        #picture3 {
+          margin-top: 10%;
+          height: 80%;
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        #textnearimg h2 {
+          font-size: 300%;
+        }
+        #textnearimg p {
+          font-size: 200%;
+        }
+      }
+
+      @media (min-width: 992px){
+        #picture {
+          margin-top: 0;  
+        }
+        #picture3 {
+          margin-top: 15%;
+        } 
+            
+        #textnearimg {
+          margin-top: 0;
+          
+        }
+        #textnearimg h2{
+          margin-top: 0;
+        }
+      }
+
+
+      #icondiv {
+        color: #E0FFFF;
+        height: 10%;
+      }
+
+      #icondiv i {
+        color: #fff;
+        font-size: 30px;
+        padding: 20px;
+        transition: all 0.5sec ease;
+      }
+
+      #icondiv i:hover {
+        color: #c71585;
+        transform: scale(1.1);
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .navbar-brand {
+        font-family: 'Marck Script', cursive;
+      }
+
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="\static\css\carousel.css" rel="stylesheet">
+  </head>
+  <body style="background-color: #E0FFFF">
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{{url_for('index')}}">Лариса и Цветок</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          {% for m in menu %}
+
+          <li class="nav-item">
+            {% if m.title == title or m.title in title %}
+            <a class="nav-link active" aria-current="page" href="{{m.url}}">{{ m.title }}</a>
+            {% elif m.title == 'Новости' or m.title == 'О нас' %}
+            <a class="nav-link disabled" aria-current="page" href="{{m.url}}">{{ m.title }}</a>
+            {% else %}
+            <a class="nav-link" aria-current="page" href="{{m.url}}">{{ m.title }}</a>
+            {% endif %}
+          </li>{% endfor %}
+         </ul>     
+  <!--<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Carousel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Disabled</a>
+          </li>
+        </ul>    
+      </div>
+    </div>
+  </nav>-->
+
+  <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <button class="navbar-toggler" style="margin-left: 10px;" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Centered nav only <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown08" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown08">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>-->
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><img src="\static\images\галерея.jpeg"></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Войти в галерею</h1>
+            <p>Просмотр готовых изделий</p>
+            <p><a class="btn btn-lg btn-primary" href="{{url_for('gallery')}}">Войти</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><img src="\static\images\instruments.jpeg"></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Материалы и способы изготовления</h1>
+            <p>Узнать из чего и каким образом производятся наши цветы</p>
+            <p><a class="btn btn-lg btn-primary disabled" href="#">Узнать больше</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><img src="\static\images\hdcolour1.jpg"></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Инфо</h1>
+            <p>Дополнительная информация</p>
+            <p><a class="btn btn-lg btn-primary disabled" href="#">Узнать</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="/static/images/good2.png" class="bd-placeholder-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>
+
+        <h2>Качество</h2>
+        <p>Наши изделия делаются из натуральных материалов, особым способом, что позволяет им оставаться долговечными</p>
+
+        <!--<p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>--> <!--Кнопка была-->
+
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="/static/images/time.png" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>
+
+        <h2>Время</h2>
+        <p>На изготовление одного цветка уходит от 2х дней до недели - в зависимости от сложности изделия и наличия материалов</p>
+
+        <!--<p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>-->  <!--Кнопка была-->
+      
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="/static/images/care.png" class="bd-placeholder-img" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/>
+
+        <h2>Безопасность</h2>
+        <p>Все материалы учавствующие в создании цветка натуральны. Они указаны в его описании. При наличии аллергии ОСОБЕННО внимательно ознакомьтесь с составом цветка.</p>
+
+        <!--<p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>-->    <!--Кнопка была-->
+
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div id="textnearimg" class="col-md-7">
+        <h2 class="featurette-heading"><span class="text-muted">Прекрасны в любом месте!</span></h2>
+        <p id="simpleP" class="lead">Украсьте любой уголок своего дома или рабочего пространства. Цветы добавят уюта вашему гнездышку, а так же привнесут изящества в любой, даже самый строгий кабинет.</p>
+      </div>
+      <div id="picture" class="col-md-5 tilt">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="\static\images\Тестовый.png" height="500" width="500">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div id="textnearimg" class="col-md-7 order-md-2">
+        <h2 class="featurette-heading"><span class="text-muted">Прекрасны всегда!</span></h2>
+        <p id="simpleP" class="lead">В отличии от обычных цветов - наши цветы постоянно свежи и прекрасны. Ваши гости 
+     непременно заинтересуются, как вам удается постоянно поддерживать у себя свежие цветы!</p>
+      </div>
+      <div id="picture" class="col-md-5 order-md-1 tilt2">
+        <img src="\static\images\Синий-цветок.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div id="textnearimg" class="col-md-7">
+        <h2 class="featurette-heading"><br><span class="text-muted">Прекрасны, потому что Вы так хотите!</span></h2>
+        <p id="simpleP" class="lead">Мы можем изготавливать изделия любой формы и цвета! Хотите обычный цветок, но не стандартной пропорции - не проблема. А может вам пришел в голову образ и вы захотели воплотить его
+        - пожалуйста, для художника нет границ! </p>
+      </div>
+      <div id="picture3" class="col-md-5 tilt">
+        <img src="\static\images\Оранжевый-цветок.png" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <div class="container shadow rounded" style="background-color: #4169e1;">
+    <div id="icondiv" class="container sm-col-4 md-lg-col-12 " style="width: 250px; margin-left: auto; margin-right: auto;">
+      <a href=""><i class="fa fa-telegram"></i></a>
+      <a href=""><i class="fa fa-instagram"></i></a>
+      <a href=""><i class="fa fa-vk"></i></a>
+    </div>
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="container" style="margin-top: 1%;">
+    <p class="float-end"><a href="">Smirnov A.M.</a></p>
+    <p>&copy; 2022 Цветочек, Inc.</p>
+  </footer>
+</main>
+
+
+    <script src="https://getbootstrap.com/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+      
+  </body>
+</html>
